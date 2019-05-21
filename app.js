@@ -11,3 +11,11 @@ document.getElementsByClassName("btn__reset").addEventListener("click", function
 // phrases array object
 var phrases = ["see eye to eye", "speak of the devil", "when pigs fly",
  "once in a blue moon", "piece of cake"];
+
+//getRandomPhraseAsArray function
+
+function getRandomPhraseAsArray(arr){
+  //code goes here
+}
+
+getRandomPhraseAsArray(phrases);
