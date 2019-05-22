@@ -17,5 +17,25 @@ var phrases = ["see eye to eye", "speak of the devil", "when pigs fly",
 function getRandomPhraseAsArray(arr){
   //code goes here
 }
-
+//calls function
 getRandomPhraseAsArray(phrases);
+
+//addPhraseToDisplay function
+function addPhraseToDisplay(){
+  //code goes here
+}
+
+//calls function
+const phraseArray = getRandomPhraseAsArray(phrases);
+addPhraseToDisplay(phraseArray);
+
+//checkLetter function
+function checkLetter('letter') {
+  
+  if(true){
+    document.style.display = 'block';
+  }
+  else(false){
+    return null;
+  }
+}
