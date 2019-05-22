@@ -1,19 +1,24 @@
 //declared variables
-const qwerty = document.getElementById("qwerty");
-const phrase = document.getElementById("phrase");
+const qwerty = document.getElementById('qwerty');
+const phrase = document.getElementById('phrase');
 let missed = 0;
 
 //event listener to button
-document.getElementsByClassName("btn__reset").addEventListener("click", function(){
-  document.getElementById("overlay").style.display = "none";
-});
+const x = document.querySelector('.btn__reset');
+const y = document.getElementById('overlay');
+
+x.addEventListener('click', RespondClick);
+
+function RespondClick(){
+  y.style.display = 'none';
+}
 
 // phrases array object
-var phrases = ["see eye to eye", "speak of the devil", "when pigs fly",
- "once in a blue moon", "piece of cake"];
+var phrases = ['see eye to eye', 'speak of the devil', 'when pigs fly',
+ 'once in a blue moon', 'piece of cake'];
 
 //getRandomPhraseAsArray function
-
+/*
 function getRandomPhraseAsArray(arr){
   //code goes here
 }
@@ -31,7 +36,7 @@ addPhraseToDisplay(phraseArray);
 
 //checkLetter function
 function checkLetter('letter') {
-  
+
   if(true){
     document.style.display = 'block';
   }
@@ -39,3 +44,9 @@ function checkLetter('letter') {
     return null;
   }
 }
+
+//add EventListener to keyboard
+
+//count the missed guesses in the game
+
+//create a checkWin function */
