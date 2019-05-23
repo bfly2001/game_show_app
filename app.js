@@ -1,6 +1,6 @@
 //declared variables
 const qwerty = document.getElementById('qwerty');
-const phrase = document.getElementById('phrase');
+let phrase = document.getElementById('phrase');
 let missed = 0;
 
 //event listener to button
@@ -18,22 +18,27 @@ var phrases = ['see eye to eye', 'speak of the devil', 'when pigs fly',
  'once in a blue moon', 'piece of cake'];
 
 //getRandomPhraseAsArray function
-/*
-function getRandomPhraseAsArray(arr){
-  //code goes here
+
+function getRandomPhraseAsArray(phrases){
+  let phraseRandom = phrases[Math.floor(Math.random() * phrases.length)];
+  let phraseArray = phraseRandom.split('');
 }
 //calls function
 getRandomPhraseAsArray(phrases);
 
 //addPhraseToDisplay function
 function addPhraseToDisplay(){
-  //code goes here
+  const node = document.createElement("LI");
+  let textnode = document.createTextNode(phraseArray);
+  node.appendChild(textnode);
+  document.querySelector('#phrase ul').appendChild(node);
+  document.querySelector('li').style.display = 'none';
 }
 
 //calls function
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
-
+/*
 //checkLetter function
 function checkLetter('letter') {
 
