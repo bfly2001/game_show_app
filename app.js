@@ -22,6 +22,7 @@ function getRandomPhraseAsArray(phrases){
   let phraseRandom = phrases[Math.floor(Math.random() * phrases.length)];
   let phraseCharacters = phraseRandom.split('');
   return value;
+}
 
 //calls getRandomPhraseAsArray function
 getRandomPhraseAsArray(phrases);
