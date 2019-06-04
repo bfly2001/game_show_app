@@ -21,7 +21,8 @@ var phrases = ['see eye to eye', 'speak of the devil', 'when pigs fly',
 function getRandomPhraseAsArray(phrases){
   let phraseRandom = phrases[Math.floor(Math.random() * phrases.length)];
   let phraseCharacters = phraseRandom.split('');
-  return value;
+  console.log(phraseCharacters);
+  return phraseCharacters;
 }
 
 //calls getRandomPhraseAsArray function
@@ -33,10 +34,12 @@ addPhraseToDisplay(phraseArray);
 
 //addPhraseToDisplay function
 function addPhraseToDisplay(phraseArray) {
-  const node = document.createElement("LI");
-  let textnode = document.createTextNode(phraseArray);
-  node.appendChild(textnode);
-  document.querySelector('#phrase ul').appendChild(node);
-  document.querySelector('li').classList.add('letter');
-  document.querySelector('li').style.display = 'block';
+  for (i = 0; i < phraseArray.length; i++) {
+    const node = document.createElement("LI");
+    let textnode = document.createTextNode(phraseArray[i]);
+    node.appendChild(textnode);
+    document.querySelector('#phrase ul').appendChild(node);
+    document.querySelector('li').classList.add('letter');
+    document.querySelector('li').style.display = 'block';
+  }
 }
