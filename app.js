@@ -18,40 +18,24 @@ var phrases = ['see eye to eye', 'speak of the devil', 'when pigs fly',
  'once in a blue moon', 'piece of cake'];
 
 //getRandomPhraseAsArray function
-
 function getRandomPhraseAsArray(phrases){
   let phraseRandom = phrases[Math.floor(Math.random() * phrases.length)];
-  let phraseArray = phraseRandom.split('');
-}
-//calls function
-getRandomPhraseAsArray(phrases);
+  let phraseCharacters = phraseRandom.split('');
+  return value;
 
-//addPhraseToDisplay function
-function addPhraseToDisplay(){
-  const node = document.createElement("LI");
-  let textnode = document.createTextNode(phraseArray);
-  node.appendChild(textnode);
-  document.querySelector('#phrase ul').appendChild(node);
-  document.querySelector('li').style.display = 'none';
-}
+//calls getRandomPhraseAsArray function
+getRandomPhraseAsArray(phrases);
 
 //calls function
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
-/*
-//checkLetter function
-function checkLetter('letter') {
 
-  if(true){
-    document.style.display = 'block';
-  }
-  else(false){
-    return null;
-  }
+//addPhraseToDisplay function
+function addPhraseToDisplay(phraseArray) {
+  const node = document.createElement("LI");
+  let textnode = document.createTextNode(phraseArray);
+  node.appendChild(textnode);
+  document.querySelector('#phrase ul').appendChild(node);
+  document.querySelector('li').classList.add('letter');
+  document.querySelector('li').style.display = 'block';
 }
-
-//add EventListener to keyboard
-
-//count the missed guesses in the game
-
-//create a checkWin function */
