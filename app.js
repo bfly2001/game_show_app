@@ -35,11 +35,15 @@ addPhraseToDisplay(phraseArray);
 //addPhraseToDisplay function
 function addPhraseToDisplay(phraseArray) {
   for (i = 0; i < phraseArray.length; i++) {
-    const node = document.createElement("LI");
-    let textnode = document.createTextNode(phraseArray[i]);
-    node.appendChild(textnode);
-    document.querySelector('#phrase ul').appendChild(node);
-    document.querySelector('li').classList.add('letter');
-    document.querySelector('li').style.display = 'block';
+      if(phraseArray.innerHTML != "") {
+        let node = document.createElement("LI");
+        node.classList.add('letter');
+        let textnode = document.createTextNode(phraseArray[i]);
+        node.appendChild(textnode);
+        document.querySelector('#phrase ul').appendChild(node);
+        //document.querySelector('li').classList.add('.letter');
+        document.querySelector('li').style.display = 'block';
+      }
+
   }
 }
