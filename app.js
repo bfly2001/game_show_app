@@ -41,11 +41,15 @@ function addPhraseToDisplay(phraseArray) {
     node.appendChild(textnode);
     document.querySelector('#phrase ul').appendChild(node);
       if(phraseArray[i] === " ") {
-        //node.classList.remove('letter');
-        node.style.backgroundColor = 'white';
-        node.style.display = 'inline-block'
+        node.classList.remove('letter');
+        node.classList.add('space');
+        //node.style.backgroundColor = 'white';
+        //node.style.display = 'inline-block'
       }
     document.querySelector('li').style.display = 'inline-block';
       }
-
   }
+
+function checkLetter(button) {
+
+}
