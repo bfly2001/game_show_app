@@ -50,6 +50,19 @@ function addPhraseToDisplay(phraseArray) {
       }
   }
 
-function checkLetter(button) {
+var btn = document.querySelectorAll('button');
+btn.addEventListener('click', checkLetter);
+btn.classList.add('chosen');
+btn.setAttribute('disabled', 'true');
 
+function checkLetter(btn) {
+  const x = phrase.getElementsByClassName('letter');
+  for(i = 0; i < phrase.length; i++) {
+    if(x = 'true') {
+      x.classList.add('show');
+      return x;
+    } else {
+      return null;
+    }
+  }
 }
