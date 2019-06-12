@@ -50,12 +50,18 @@ function addPhraseToDisplay(phraseArray) {
       }
   }
 
-var btn = document.querySelectorAll('button');
-btn.addEventListener('click', checkLetter);
-btn.classList.add('chosen');
-btn.setAttribute('disabled', 'true');
+let button = document.body.addEventListener('click', event => {
+  if (event.target.nodeName == 'BUTTON') {
+    console.log('Clicked', event.target.textContent);
+    event.target.classList.add('chosen');
+    event.target.setAttribute('disabled', true);
+  }
+});
 
-function checkLetter(btn) {
+//button.classListAdd('chosen');
+//button.target.node.setAttribute('disabled');
+
+/*function checkLetter(btn) {
   const x = phrase.getElementsByClassName('letter');
   for(i = 0; i < phrase.length; i++) {
     if(x = 'true') {
@@ -66,3 +72,4 @@ function checkLetter(btn) {
     }
   }
 }
+*/
