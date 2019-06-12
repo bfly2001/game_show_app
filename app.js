@@ -50,26 +50,23 @@ function addPhraseToDisplay(phraseArray) {
       }
   }
 
+  function checkLetter(button) {
+    let letters = document.getElementsByClassName('letter');
+    for (i = 0; i < letters.length; i++) {
+      if (letters[i].textContent = button.textContent) {
+        letters.classList.add('show');
+        return x;
+      } else {
+        return null;
+      }
+    }
+  }
+
 let button = document.body.addEventListener('click', event => {
   if (event.target.nodeName == 'BUTTON') {
     console.log('Clicked', event.target.textContent);
     event.target.classList.add('chosen');
     event.target.setAttribute('disabled', true);
+    checkLetter(button);
   }
 });
-
-//button.classListAdd('chosen');
-//button.target.node.setAttribute('disabled');
-
-/*function checkLetter(btn) {
-  const x = phrase.getElementsByClassName('letter');
-  for(i = 0; i < phrase.length; i++) {
-    if(x = 'true') {
-      x.classList.add('show');
-      return x;
-    } else {
-      return null;
-    }
-  }
-}
-*/
