@@ -52,10 +52,9 @@ function addPhraseToDisplay(phraseArray) {
 
   function checkLetter(button) {
     let letters = document.getElementsByClassName('letter');
-    for (i = 0; i < letters.length; i++) {
-      if (letters[i].textContent = button.textContent) {
-        letters.classList.add('show');
-        return x;
+    for (i = 0; i < letters[i].length; i++) {
+      if (letters[i].textContent = button) {
+        button.classList.add('show');
       } else {
         return null;
       }
@@ -67,6 +66,8 @@ let button = document.body.addEventListener('click', event => {
     console.log('Clicked', event.target.textContent);
     event.target.classList.add('chosen');
     event.target.setAttribute('disabled', true);
-    checkLetter(button);
+    button = event.target.textContent;
+    let letterFound = checkLetter(button);
+    return letterFound;
   }
 });
