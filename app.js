@@ -52,13 +52,14 @@ function addPhraseToDisplay(phraseArray) {
 
   function checkLetter(button) {
     let letters = document.getElementsByClassName('letter');
-    for (i = 0; i < letters[i].length; i++) {
-      if (letters[i].textContent = button) {
-        button.classList.add('show');
-      } else {
-        return null;
+    let match = null;
+    for (i = 0; i < letters.length; i++) {
+      if (letters[i].textContent === button) {
+        letters[i].classList.add('show');
+        match = true;
       }
     }
+    return match;
   }
 
 let button = document.body.addEventListener('click', event => {
@@ -68,6 +69,10 @@ let button = document.body.addEventListener('click', event => {
     event.target.setAttribute('disabled', true);
     button = event.target.textContent;
     let letterFound = checkLetter(button);
-    return letterFound;
+    //return letterFound;
+    if (letterFound == null) {
+      let elem = document.getElementsByClassName('tries')[0];
+      elem.remove();
+    }
   }
 });
