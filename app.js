@@ -62,6 +62,24 @@ function addPhraseToDisplay(phraseArray) {
     return match;
   }
 
+function checkWin() {
+  let numberShown = document.getElementsByClassName('show').length;
+  let numberLetters = document.getElementsByClassName('letter').length;
+  let misses = document.getElementsByClassName('tries').length;
+  let overlay = document.getElementById('overlay');
+  console.log(misses);
+  if (numberShown == numberLetters) {
+    overlay.classList.add('win');
+    overlay.innerHTML = 'YOU WIN!';
+    overlay.style.display = 'inline-block';
+  } else if (misses == 0) {
+      overlay.classList.add('lose');
+      overlay.innerHTML = 'TRY AGAIN';
+      overlay.style.display = 'inline-block';
+
+  }
+}
+
 let button = document.body.addEventListener('click', event => {
   if (event.target.nodeName == 'BUTTON') {
     console.log('Clicked', event.target.textContent);
@@ -75,4 +93,5 @@ let button = document.body.addEventListener('click', event => {
       elem.remove();
     }
   }
+  checkWin();
 });
