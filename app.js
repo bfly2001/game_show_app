@@ -77,12 +77,18 @@ function checkWin() {
     overlay.innerHTML = 'YOU WIN!';
     overlay.style.display = 'inline-block';
     overlay.appendChild(retryButton);
+    retryButton.onclick = function() {
+      location.reload(true);
+    }
     retryButton.style.display = 'block';
   } else if (misses == 0) {
       overlay.classList.add('lose');
       overlay.innerHTML = 'TRY AGAIN!';
       overlay.style.display = 'inline-block';
       overlay.appendChild(retryButton);
+      retryButton.onclick = function() {
+        location.reload(true);
+      }
       retryButton.style.display = 'block';
 
   }
