@@ -67,15 +67,23 @@ function checkWin() {
   let numberLetters = document.getElementsByClassName('letter').length;
   let misses = document.getElementsByClassName('tries').length;
   let overlay = document.getElementById('overlay');
+  var retryButton = document.createElement('input');
+    retryButton.setAttribute('type', 'button');
+    retryButton.setAttribute('name', 'retry');
+    retryButton.setAttribute('value', 'retry');
   console.log(misses);
   if (numberShown == numberLetters) {
     overlay.classList.add('win');
     overlay.innerHTML = 'YOU WIN!';
     overlay.style.display = 'inline-block';
+    overlay.appendChild(retryButton);
+    retryButton.style.display = 'block';
   } else if (misses == 0) {
       overlay.classList.add('lose');
-      overlay.innerHTML = 'TRY AGAIN';
+      overlay.innerHTML = 'TRY AGAIN!';
       overlay.style.display = 'inline-block';
+      overlay.appendChild(retryButton);
+      retryButton.style.display = 'block';
 
   }
 }
