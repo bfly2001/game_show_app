@@ -149,6 +149,8 @@ button {
 
 .win {
   background-color: var(--color-win);
+  font-size: 600%;
+  padding: 25%;
 }
 
 .win a {
@@ -157,6 +159,8 @@ button {
 
 .lose {
   background-color: var(--color-lose);
+  font-size: 600%;
+  padding: 25%;
 }
 
 .lose a {

@@ -69,8 +69,8 @@ function checkWin() {
   let overlay = document.getElementById('overlay');
   var retryButton = document.createElement('input');
     retryButton.setAttribute('type', 'button');
-    retryButton.setAttribute('name', 'retry');
-    retryButton.setAttribute('value', 'retry');
+    retryButton.setAttribute('name', 'Retry');
+    retryButton.setAttribute('value', 'Retry');
   console.log(misses);
   if (numberShown == numberLetters) {
     overlay.classList.add('win');
@@ -80,6 +80,8 @@ function checkWin() {
     retryButton.onclick = function() {
       location.reload(true);
     }
+    retryButton.style.fontSize = '100%';
+    retryButton.style.margin = 'auto';
     retryButton.style.display = 'block';
   } else if (misses == 0) {
       overlay.classList.add('lose');
@@ -89,6 +91,8 @@ function checkWin() {
       retryButton.onclick = function() {
         location.reload(true);
       }
+      retryButton.style.fontSize = '100%';
+      retryButton.style.margin = 'auto';
       retryButton.style.display = 'block';
 
   }
